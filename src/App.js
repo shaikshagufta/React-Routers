@@ -5,6 +5,7 @@ import Header from './components/Header';
 import About from './pages/About';
 import Home from './pages/Home';
 import Notfound from './pages/Notfound.js';
+import Post from './pages/Post';
 import Profile from './pages/Profile';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' component={Home} exact />
         <Route path='/about' component={About} />
         <Route path='/profile' component={Profile} />
+        <Route path='/post/:id' component={Post} />
         <Route component={Notfound} />
       </Switch>
     </BrowserRouter>
