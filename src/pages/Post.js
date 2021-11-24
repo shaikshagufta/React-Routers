@@ -1,5 +1,10 @@
-const Post = ({match}) => {
-    return <h2>ID is = {match.params.id}</h2>
+import { useParams } from "react-router";
+// fetchid id from url
+const Post = () => {
+
+    const { id } = useParams();
+
+    return <h2>ID is = {id}</h2>
 };
 
 export default Post;
