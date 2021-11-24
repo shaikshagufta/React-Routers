@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { BrowserRouter, Route, Switch , Redirect} from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import About from './pages/About';
@@ -25,7 +25,7 @@ function App() {
           <Route path='/' component={Home} exact />
           <Route path='/about' component={About} />
           <Route path='/profile'>
-            {login ? <Profile /> : <Redirect to='/' />}
+            <Profile login={login}/>
           </Route>
           <Route path='/post/:id' component={Post} />
           <Route component={Notfound} />
